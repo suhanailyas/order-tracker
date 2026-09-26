@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order Tracker & Live Support</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📦 Real-Time Order Tracker</h1>
+    <div class="config">
+      <label>Backend URL:
+        <input id="backendUrl" type="text" placeholder="https://your-backend.onrender.com" />
+      </label>
+      <button id="connectBtn">Connect</button>
+      <span id="connStatus" class="status-dot offline"></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- LEFT: Orders (REST) -->
+    <section class="panel">
+      <h2>Orders <small>(REST API)</small></h2>
+      <form id="newOrderForm">
+        <input id="customerName" placeholder="Customer name" required />
+        <input id="itemName" placeholder="Item (e.g. p1)" required />
+        <button type="submit">Place Order</button>
+      </form>
+      <ul id="ordersList"></ul>
+    </section>
+
+    <!-- MIDDLE: Live tracking + JSON-RPC -->
+    <section class="panel">
+      <h2>Track Order <small>(WebSocket + JSON-RPC)</small></h2>
+      <input id="trackOrderId" placeholder="Order ID (e.g. ord-1001)" />
+      <button id="trackBtn">Track</button>
+      <div id="trackStatus" class="status-box">No order tracked yet.</div>
+      <button id="cancelBtn" disabled>Cancel Order (JSON-RPC)</button>
+
+      <h3>Live Chat (Customer ⇄ Support)</h3>
+      <div class="role-select">
+        <label><input type="radio" name="role" value="Customer" checked /> Customer</label>
+        <label><input type="radio" name="role" value="Support" /> Support</label>
+      </div>
+      <div id="chatLog" class="chat-log"></div>
+      <form id="chatForm">
+        <input id="chatInput" placeholder="Type a message…" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- RIGHT: SSE alerts -->
+    <section class="panel">
+      <h2>Live System Alerts <small>(SSE)</small></h2>
+      <ul id="alertsList"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
