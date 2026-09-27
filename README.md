@@ -98,3 +98,4 @@ The frontend is plain HTML/JS with no build step — just open `frontend/index.h
 8. <img width="1331" height="648" alt="image" src="https://github.com/user-attachments/assets/c0aa8c36-1d0b-40e0-829d-0d9187672bc8" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bcda4d9a-6ef7-4ce4-a407-cd82c0e6c5f4" />
 
+<img width="1144" height="678" alt="image" src="https://github.com/user-attachments/assets/5fdaffbb-1e87-412e-8d84-cb5e612d85f5" />
