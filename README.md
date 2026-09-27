@@ -95,3 +95,6 @@ The frontend is plain HTML/JS with no build step — just open `frontend/index.h
 5. In Tab 1, change the role to **Support** and send a chat message — it should appear live in Tab 2.
 6. Click **Cancel Order** (JSON-RPC) and watch the status update live in both tabs.
 7. Watch the **Live System Alerts** panel — SSE pushes should appear automatically.
+8. <img width="1331" height="648" alt="image" src="https://github.com/user-attachments/assets/c0aa8c36-1d0b-40e0-829d-0d9187672bc8" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bcda4d9a-6ef7-4ce4-a407-cd82c0e6c5f4" />
+
